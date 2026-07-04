@@ -31,7 +31,7 @@ export default function Button({
       border-white/20
       bg-white/10
       backdrop-blur-xl
-      px-8
+      px-10
       py-4
       text-white
       font-medium

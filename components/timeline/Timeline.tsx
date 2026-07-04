@@ -5,17 +5,17 @@ import { timeline } from "@/data/timeline";
 
 export default function Timeline() {
     return (
-        <section className="relative py-40 px-6">
+        <section className="relative ">
 
             <div className="mx-auto max-w-7xl">
 
-                <div className="text-center">
+                <div className="text-center flex">
 
                     <p className="tracking-[6px] uppercase text-[#D97C90]">
                         OUR JOURNEY
                     </p>
 
-                    <h1 className="mt-5 font-[var(--font-cormorant)] text-6xl">
+                    <h1 className="mt-5  text-6xl">
                         Every Memory
                         <br />
                         Has A Heartbeat

@@ -10,7 +10,7 @@ export default function Hero() {
             {/* Background */}
 
             <Image
-                src="/images/hero/wallpaper.jpg"
+                src="/images/hero/home.png"
                 alt="Hero"
                 fill
                 priority
@@ -19,7 +19,7 @@ export default function Hero() {
 
             {/* Mobile */}
             <Image
-                src="/images/hero/mobile-wallpaper.jpg"
+                src="/images/hero/color.png"
                 alt="Hero"
                 fill
                 priority
@@ -28,9 +28,8 @@ export default function Hero() {
 
             {/* Overlay */}
 
-            <div className="absolute inset-0 bg-black/20 md:bg-black/30 " />
+            <div className="absolute inset-0 bg-black/20 md:bg-black/10 " />
 
-            {/* Decorative Blur */}
 
             <div className="absolute left-10 top-10 h-48 w-48 rounded-full bg-pink-300/20 blur-3xl" />
 
@@ -38,12 +37,12 @@ export default function Hero() {
 
             {/* Content */}
 
-            <div className="relative z-20 flex h-full flex-col items-center justify-center px-6 text-center">
+            <div className="relative z-20 flex h-full flex-col left-5 top-70 md:left-25 md:top-45">
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
-                    className="tracking-[8px] text-white/70 uppercase"
+                    className="tracking-[8px] text-black/70 uppercase text-lg"
                 >
                     OUR STORY
                 </motion.p>
@@ -60,13 +59,11 @@ export default function Hero() {
                     transition={{
                         duration: 1,
                     }}
-                    className="mt-6 max-w-5xl font-[var(--font-cormorant)] text-5xl md:text-7xl text-white leading-tight"
+                    className="mt-6 max-w-6xl font-serif text-5xl md:text-8xl text-white leading-tight"
                 >
-                    Every beautiful story
-                    <br />
-                    starts with
-                    <br />
-                    a single hello.
+                    Every Beautiful Story
+                    Starts With
+                    A <span className="text-amber-200">Bestfriends</span> to <span className="text-pink-500">Soulmate</span>.
                 </motion.h1>
 
                 <motion.p
@@ -79,20 +76,18 @@ export default function Hero() {
                     transition={{
                         delay: 1,
                     }}
-                    className="mt-8 max-w-xl text-white/80 text-lg"
+                    className="mt-8 max-w-2xl text-black/70 font-serif tracking-wider uppercase text-[14px]"
                 >
                     Some memories deserve more than a place in our phones.
-                    They deserve a home.
+                    They deserve a <span className="text-white text-3xl font-bold">home</span>.
                 </motion.p>
 
-                <Button>
-                    Begin Our Journey ❤️
-                </Button>
+
             </div>
 
             {/* Scroll Indicator */}
 
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 animate-bounce">
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-6xl animate-bounce">
                 ↓
             </div>
         </section>
