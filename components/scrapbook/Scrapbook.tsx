@@ -5,25 +5,24 @@ import { scrapbook } from "@/data/scrapbook";
 
 export default function Scrapbook() {
     return (
-        <section className="relative py-40">
+        <section className="flex items-center justify-center py-6">
 
-            <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-7xl flex gap-15 flex-col">
 
                 <div className="text-center">
 
-                    <p className="tracking-[6px] uppercase text-[#D97C90]">
+                    <p className="tracking-[6px] italic uppercase text-[#D97C90]">
                         MEMORIES
                     </p>
 
-                    <h1 className="mt-5 font-[var(--font-cormorant)] text-6xl">
-                        The Moments
-                        <br />
+                    <h1 className="mt-4 font-serif italic max-w- text-5xl">
+                        The Moments <br />
                         We Never Want To Forget
                     </h1>
 
                 </div>
 
-                <div className="mt-24 flex flex-wrap justify-center gap-14">
+                <div className="mt-3 flex flex-wrap justify-center gap-14">
 
                     {scrapbook.map((item) => (
                         <Polaroid

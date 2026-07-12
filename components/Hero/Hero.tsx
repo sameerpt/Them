@@ -37,7 +37,7 @@ export default function Hero() {
 
             {/* Content */}
 
-            <div className="relative z-20 flex h-full flex-col left-5 top-70 md:left-25 md:top-45">
+            <div className="relative z-20 flex italic h-full flex-col left-5 top-70 md:left-25 md:top-45">
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -59,11 +59,9 @@ export default function Hero() {
                     transition={{
                         duration: 1,
                     }}
-                    className="mt-6 max-w-6xl font-serif text-5xl md:text-8xl text-white leading-tight"
-                >
-                    Every Beautiful Story
-                    Starts With
-                    A <span className="text-amber-200">Bestfriends</span> to <span className="text-pink-500">Soulmate</span>.
+                    className="mt-6 max-w-6xl font-serif text-5xl md:text-8xl text-white italic leading-tight"
+                > Every beautiful story begins with a 
+                    <span className="text-amber-200"> Best friend</span> who becomes a <span className="text-pink-500">Soulmate</span>.
                 </motion.h1>
 
                 <motion.p
@@ -76,10 +74,10 @@ export default function Hero() {
                     transition={{
                         delay: 1,
                     }}
-                    className="mt-8 max-w-2xl text-black/70 font-serif tracking-wider uppercase text-[14px]"
+                    className="mt-2 max-w-2xl italic  text-black/70 font-serif tracking-wider uppercase text-[14px]"
                 >
                     Some memories deserve more than a place in our phones.
-                    They deserve a <span className="text-white text-3xl font-bold">home</span>.
+                    They deserve a <span className="text-white md:text-3xl text-lg font-bold">home</span>.
                 </motion.p>
 
 
@@ -87,7 +85,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
 
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-6xl animate-bounce">
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white text-6xl animate-bounce hidden md:block">
                 ↓
             </div>
         </section>

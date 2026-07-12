@@ -38,12 +38,13 @@ export default function TimelineCard({
                 }`}
         >
             <div>
-                <div className="relative h-[450px] overflow-hidden rounded-[30px] shadow-2xl">
+                <div className="relative overflow-hidden rounded-4xl shadow-[0_30px_80px_rgba(0,0,0,.12)]">
                     <Image
                         src={item.image}
                         alt={item.title}
-                        fill
-                        className="object-cover transition duration-700 hover:scale-110"
+                        width={700}
+                        height={900}
+                        className="aspect-4/5 w-full object-cover transition duration-700 hover:scale-105"
                     />
                 </div>
             </div>

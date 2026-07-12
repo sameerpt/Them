@@ -1,7 +1,7 @@
 export const scrapbook = [
   {
     id: 1,
-    image: "/images/scrapbook/1.jpg",
+    image: "/images/funny/1.jpg",
     caption: "You smiled. The sunset lost.",
     rotation: "-6deg",
   },

@@ -7,9 +7,10 @@ export default function Home() {
     <main>
       <Hero />
 
+      <Scrapbook />
+      
       <Timeline />
 
-      <Scrapbook />
     </main>
   );
 }
