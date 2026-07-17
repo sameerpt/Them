@@ -1,34 +1,30 @@
 "use client";
 
-import TimelineCard from "./TimelineCard";
 import { timeline } from "@/data/timeline";
+import TimelineCard from "./TimelineCard";
 
 export default function Timeline() {
     return (
-        <section className="relative py-32 md:py-40">
-            <div className="mx-auto w-full max-w-7xl px-6 md:px-10 lg:px-16">
+        <section className="relative py-15 md:py-26">
 
-                {/* Heading */}
+            <div className="mx-auto max-w-7xl px-6">
 
-                <div className="mx-auto mb-28 max-w-4xl text-center">
-                    <p className="mb-4 text-sm uppercase tracking-[8px] text-[#D97C90]">
-                        OUR JOURNEY
-                    </p>
 
-                    <h2 className="font-[var(--font-cormorant)] text-5xl leading-none text-[#2A2526] md:text-7xl">
+                <div className="mx-auto mb-14 max-w-3xl text-center">
+
+                    <span className="inline-block uppercase tracking-[6px] text-[#D97C90]">
+                        Our Journey
+                    </span>
+
+                    <h2 className="mt-3 font-serif italic text-5xl leading-none">
                         Every Memory
-                        <br />
-                        Has A Heartbeat
+                        Has  <br /> A Heartbeat
+                       
                     </h2>
 
-                    <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-gray-500">
-                        Every picture holds a memory. Every memory tells our story.
-                    </p>
                 </div>
 
-                {/* Timeline */}
-
-                <div className="space-y-44">
+                <div className="space-y-20">
                     {timeline.map((item, index) => (
                         <TimelineCard
                             key={item.id}
@@ -39,6 +35,7 @@ export default function Timeline() {
                 </div>
 
             </div>
+
         </section>
     );
 }

@@ -40,13 +40,13 @@ export default function Polaroid({
             style={{
                 rotate: rotation,
             }}
-            className="relative bg-white p-4 shadow-2xl rounded-md"
+            className="relative bg-white p-4 shadow-lg rounded-md"
         >
             {/* Tape */}
 
             <div className="absolute left-1/2 top-0 h-8 w-20 -translate-x-1/2 -translate-y-1/2 rounded-sm bg-[#f7e8c5]/80 backdrop-blur-sm" />
 
-            <div className="relative h-[350px] w-[280px] overflow-hidden">
+            <div className="relative md:h-90  h-60 overflow-hidden">
                 <Image
                     fill
                     src={image}
@@ -55,7 +55,7 @@ export default function Polaroid({
                 />
             </div>
 
-            <p className="mt-5 text-center font-[var(--font-dancing)] text-2xl">
+            <p className="mt-5 text-center font-mono text-xl">
                 {caption}
             </p>
         </motion.div>

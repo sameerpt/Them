@@ -15,14 +15,14 @@ export default function Scrapbook() {
                         MEMORIES
                     </p>
 
-                    <h1 className="mt-4 font-serif italic max-w- text-5xl">
+                    <h1 className="mt-4 font-serif italic text-5xl">
                         The Moments <br />
                         We Never Want To Forget
                     </h1>
 
                 </div>
 
-                <div className="mt-3 flex flex-wrap justify-center gap-14">
+                <div className=" flex flex-wrap justify-center gap-14">
 
                     {scrapbook.map((item) => (
                         <Polaroid

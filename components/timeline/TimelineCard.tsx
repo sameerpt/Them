@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+
+interface TimelineItem {
+    title: string;
+    date: string;
+    media: string;
+    type: "image" | "video";
+    description: string;
+}
 
 interface Props {
-    item: {
-        title: string;
-        date: string;
-        image: string;
-        description: string;
-    };
-
+    item: TimelineItem;
     reverse?: boolean;
 }
 
@@ -19,49 +20,58 @@ export default function TimelineCard({
     reverse = false,
 }: Props) {
     return (
-        <motion.div
-            initial={{
-                opacity: 0,
-                y: 80,
-            }}
-            whileInView={{
-                opacity: 1,
-                y: 0,
-            }}
-            viewport={{
-                once: true,
-            }}
-            transition={{
-                duration: 0.8,
-            }}
-            className={`grid gap-12 items-center lg:grid-cols-2 ${reverse ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
+        <motion.article
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8 }}
+            className={` max-w-6xl grid items-center gap-12 lg:grid-cols-[460px_1fr]
+      ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}
         >
-            <div>
-                <div className="relative overflow-hidden rounded-4xl shadow-[0_30px_80px_rgba(0,0,0,.12)]">
-                    <Image
-                        src={item.image}
+
+            <div className="group relative  overflow-hidden rounded-[30px] ">
+
+                {item.type === "image" ? (
+                    <img
+                        src={item.media}
                         alt={item.title}
-                        width={700}
-                        height={900}
-                        className="aspect-4/5 w-full object-cover transition duration-700 hover:scale-105"
+                        className="aspect-4/5 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                </div>
+                ) : (
+                    <video
+                        src={item.media}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="aspect-4/5 h-140 object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                )}
+
+
+
             </div>
 
-            <div>
-                <p className="text-[#D97C90] uppercase tracking-[5px]">
-                    {item.date}
-                </p>
 
-                <h2 className="mt-3 font-[var(--font-cormorant)] text-5xl">
+            <div className="max-w-lg">
+
+
+                <span className="inline-flex font-semibold uppercase leading-2 tracking-[5px] text-[#D97C90]">
+                    {item.date}
+                </span>
+
+
+                <h2 className="mt-5 font-mono text-5xl leading-[0.95] text-[#2A2526] md:text-6xl">
                     {item.title}
                 </h2>
 
-                <p className="mt-8 text-lg leading-9 text-gray-700">
+
+
+                <p className="mt-6 text-lg leading-8 text-neutral-600">
                     {item.description}
                 </p>
+
             </div>
-        </motion.div>
+        </motion.article>
     );
 }
